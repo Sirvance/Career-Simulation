@@ -32,3 +32,16 @@ async function render(){
             list.append(li)
     })
 }
+
+
+showButton.addEventListener("click", () => {
+    isHidden = !isHidden;
+    if (isHidden) {
+      showButton.textContent = "Show Images";
+      list.style.display = "none"; 
+    } else {
+      showButton.textContent = "Hide";
+      list.style.display = "block";
+      render();
+    }
+  });
